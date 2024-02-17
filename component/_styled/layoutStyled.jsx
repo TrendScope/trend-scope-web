@@ -16,7 +16,7 @@ export const LayoutContent = styled.div`
     margin: 5%;
 `
 
-// navber
+// navbar
 export const NavContainer = styled.div`
     width: 100%;
     display: flex;
@@ -24,7 +24,33 @@ export const NavContainer = styled.div`
     padding: 5% 0;
     height: 50px;
     align-items: center;
+`
+
+export const Logo = styled.div`
+    display: flex;
+    width: 60%;
+    margin-left: 20%;
+    align-items: center;
     justify-content: center;
+    gap: 5%;
+`
+
+export const LogoImage = styled(Image)`
+    width: 30px;
+    cursor: pointer;
+`
+
+export const LogoText = styled(Image)`
+    width: 100px;
+    cursor: pointer;
+`
+
+export const NavBtn = styled.button`
+    width: 5%;
+    margin-left: 10%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 `
 
 // Footer
