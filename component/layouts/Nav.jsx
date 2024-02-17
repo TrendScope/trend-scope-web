@@ -14,7 +14,7 @@ export default function Nav() {
                 <S.LogoImage src={logo_image} alt="logo_image" />
                 <S.LogoText src={logo_text} alt="logo_text" />
             </S.Logo>
-            <S.NavBtn icon={faBars}/>
+            <S.NavBtn icon={faBars} width={10}/>
         </S.NavContainer>
     )
 }

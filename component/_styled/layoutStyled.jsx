@@ -48,7 +48,7 @@ export const LogoText = styled(Image)`
 `
 
 export const NavBtn = styled(FontAwesomeIcon)`
-    width: 3%;
+    width: 15px;
     margin-left: 10%;
     cursor: pointer;
 `
