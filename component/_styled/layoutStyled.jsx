@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const LayoutWrapper = styled.div`
     max-width: 700px;
@@ -16,15 +17,40 @@ export const LayoutContent = styled.div`
     margin: 5%;
 `
 
-// navber
+// navbar
 export const NavContainer = styled.div`
     width: 100%;
     display: flex;
     background-color: #F3F9FD;
-    padding: 5% 0;
-    height: 50px;
+    padding: 2% 0;
+    align-items: center;
+`
+
+export const Logo = styled.div`
+    display: flex;
+    width: 60%;
+    padding: 0 10%;
+    margin-left: 20%;
     align-items: center;
     justify-content: center;
+    gap: 5%;
+`
+
+export const LogoImage = styled(Image)`
+    width: 10%;
+    height: auto;
+    cursor: pointer;
+`
+
+export const LogoText = styled(Image)`
+    width: 50%;
+    cursor: pointer;
+`
+
+export const NavBtn = styled(FontAwesomeIcon)`
+    width: 15px;
+    margin-left: 10%;
+    cursor: pointer;
 `
 
 // Footer
