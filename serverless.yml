@@ -1,6 +1,6 @@
 # serverless.yml
 myNextApplication:
-  component: '@sls-next/serverless-component@latest'
+  component: '@sls-next/serverless-component'
   inputs:
     name:
       defaultLambda: DefaultLambda	#Default Lambda의 이름 설정 
