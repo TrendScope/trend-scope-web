@@ -57,7 +57,20 @@ export const NavBtn = styled(FontAwesomeIcon)`
 export const FooterContainer = styled.div`
     border: solid black;
     border-width: 1px 0 0;
-    height: 50px;
-    text-align: center;
     margin: auto 5%;
+    display: flex;
+    flex-direction: column;
+    padding: 3% 0;
+    font-size: 12px;
+    color: #7F85A3;
+`
+
+export const FooterText = styled.span`
+    margin: 1% 0;
+`
+
+export const FooterGit = styled(FontAwesomeIcon)`
+    width: 16px;
+    margin-top: 2%;
+    cursor: pointer;
 `
