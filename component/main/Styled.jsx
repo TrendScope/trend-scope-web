@@ -72,9 +72,9 @@ export const SearchThemePlaceholder = styled.input`
 `
 
 export const SearchThemeBtn = styled.button`
-    background-color: ${(props)=>(props.isactive?'#264466':'#DEEBF3')};
-    color: ${(props)=>(props.isactive?'#ffffff':'#95AEC2')};
-    cursor: ${(props)=>(props.isactive?'pointer':'')};
+    background-color: ${(props)=>(props.isactive==='true'?'#264466':'#DEEBF3')};
+    color: ${(props)=>(props.isactive==='true'?'#ffffff':'#95AEC2')};
+    cursor: ${(props)=>(props.isactive==='true'?'pointer':'')};
     border: none;
     border-radius: 8px;
     height: 40px;

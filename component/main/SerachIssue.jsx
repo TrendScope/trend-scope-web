@@ -25,7 +25,7 @@ export default function SearchIssue() {
           type="text"
         />
         <S.SearchThemeBtn
-          isactive={theme.length > 0 ? true : false}
+          isactive={theme.length > 0 ? 'true' : 'false'}
         >
           <S.SearchThemeBtnFont icon={faSearch}/>
         </S.SearchThemeBtn>
