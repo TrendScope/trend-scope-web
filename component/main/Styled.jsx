@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
+import { fadeIn } from "../_styled/animationStyled.jsx";
 
 // SearchIssue
 export const SearchContainer = styled.div`
@@ -71,11 +72,15 @@ export const SearchThemePlaceholder = styled.input`
 `
 
 export const SearchThemeBtn = styled.button`
-    background-color: #DEEBF3;
+    background-color: ${(props)=>(props.isactive?'#264466':'#DEEBF3')};
+    color: ${(props)=>(props.isactive?'#ffffff':'#95AEC2')};
+    cursor: ${(props)=>(props.isactive?'pointer':'')};
     border: none;
     border-radius: 8px;
     height: 40px;
     width: 40px;
+    transition: background-color 0.5s ease, color 0.5s ease; 
+    animation: ${fadeIn} 0.5s ease;
 `
 
 export const SearchThemeBtnFont = styled(FontAwesomeIcon)`
