@@ -11,7 +11,7 @@ export const SearchContainer = styled.div`
     padding: 5px 5%;
 `
 
-export const SearchText = styled.span`
+export const MainText = styled.span`
     font-size: 16px;
     font-weight: bold;
     margin: 3% 0;
@@ -34,7 +34,7 @@ export const SearchCategory = styled.div`
 export const SearchCategoryList = styled.div`
     background-color: white;
     border-radius: 12px;
-    padding: 10px auto;
+    padding: 10px 0;
     color: #C0C5DC;
     font-size: 12px;
     width: 90%;
@@ -50,7 +50,7 @@ export const SearchCheckedCategory = styled.div`
     border-radius: 12px;
     background-color: #65839D;
     color: #ffffff;
-    padding: 0 3%;
+    padding: 0 12px;
     height: 24px;
     line-height: 24px;
     margin-right: 2%;
@@ -164,4 +164,119 @@ export const SearchThemeBtn = styled.button`
 
 export const SearchThemeBtnFont = styled(FontAwesomeIcon)`
     width: 12px;
+`
+
+// Issue History
+export const HistoryContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    padding: 5px 5%;
+`
+
+export const HistoryMore = styled.div`
+    margin: 3% 0;
+    text-align: right;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const HistoryMoreIcon = styled(FontAwesomeIcon)`
+    height: 12px;
+    margin-left: 5px;
+    cursor: pointer;
+`
+
+export const HistoryCardSlide = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    
+    ::-webkit-scrollbar {
+        width: 2px;
+        height: 2px;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+    }
+`
+
+export const HistoryCard = styled.div`
+    background-color: #CEDEED;
+    border-radius: 8px;
+    border: 1px solid #BCCFDE;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 210px;
+    margin-right: 5%;
+    padding: 5%;
+    cursor: pointer;
+`
+
+export const HistoryCardTop = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+`
+
+export const HistoryCardText = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+`
+
+export const HistoryCardDate = styled.div`
+    font-size: 14px;
+    color: #7F85A3;
+    margin-bottom: 5%;
+`
+
+export const HistoryCardTheme = styled.div`
+    font-size: 14px;
+    color: #2A2A3A;
+`
+
+export const HistoryCardPercent = styled.div`
+    background: ${(props)=>props.percent && `conic-gradient(#264466 ${props.percent}%, #F3F9FD 0%)`};
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const HistoryCardPercentInner = styled.div`
+    background-color: #264466;
+    color: #FFFFFF;
+    border: 1px solid #F3F9FD;
+    border-radius: 100%;
+    font-size: 10px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const HistoryCardCategoryBox = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    margin-top: 10%;
+    font-size: 12px;
+    align-items: center;
+    gap: 2%;
+    white-space: nowrap;
 `

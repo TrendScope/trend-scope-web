@@ -1,6 +1,7 @@
 import { faChartLine, faCircleExclamation } from "@fortawesome/free-solid-svg-icons"
 import * as S from "../component/_styled/mainStyled"
 import SearchIssue from "@/component/main/SerachIssue"
+import IssueHistory from "@/component/main/IssueHistory"
 
 export default function Main() {
   return (
@@ -17,6 +18,8 @@ export default function Main() {
       </S.MainIssueBox>
 
       <SearchIssue />
+
+      <IssueHistory />
     </S.MainContainer>
   )
 }
