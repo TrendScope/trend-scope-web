@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styled from "styled-components";
-import { fadeIn } from "../_styled/animationStyled.jsx";
+import styled, { css } from "styled-components";
+import { fadeIn, rotate, SlideDown, SlideUp } from "../_styled/animationStyled.jsx";
 
 // SearchIssue
 export const SearchContainer = styled.div`
@@ -28,15 +28,50 @@ export const SearchCategory = styled.div`
     gap: 3%;
     justify-content: space-between;
     padding: 8px 5px;
+    z-index: 50;
 `
 
 export const SearchCategoryList = styled.div`
     background-color: white;
     border-radius: 12px;
-    padding: 10px 3%;
+    padding: 10px auto;
     color: #C0C5DC;
     font-size: 12px;
     width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 40px;
+    padding: 0 2%;
+`
+
+export const SearchCheckedCategory = styled.div`
+    border: none;
+    border-radius: 12px;
+    background-color: #65839D;
+    color: #ffffff;
+    padding: 0 3%;
+    height: 24px;
+    line-height: 24px;
+    margin-right: 2%;
+`
+
+export const SearchCategoryMore = styled.div`
+    font-size: 12px;
+    color: #65839D;
+`
+
+export const SearchCategoryCount = styled.div`
+    border: none;
+    border-radius: 100%;
+    font-size: 12px;
+    background-color: #65839D;
+    color: #ffffff;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    margin-left: 2%;
 `
 
 export const SearchCategoryIcon = styled(FontAwesomeIcon)`
@@ -44,6 +79,50 @@ export const SearchCategoryIcon = styled(FontAwesomeIcon)`
     margin-right: 3%;
     color: #264466;
     cursor: pointer;
+    transition: transform 0.8s ease;
+    &:active, &hover {
+        animation: ${rotate} 0.8s ease;
+    }
+`
+
+export const SearchCategoryModal = styled.div`
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 10px 5px;
+    background-color: #F3F9FD;
+    margin-top: -5px;
+`
+
+export const SearchCategoryBox = styled.div`
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+`
+
+export const SearchCategoryInput = styled.input`
+    -webkit-appearance: none; /* Chrome, Safari, Edge */
+    -moz-appearance: none; /* Firefox */
+    appearance: none; /* 기타 브라우저 */
+
+    margin: 10px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #264466;
+    background-color: #ffffff;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+
+    &:checked {
+        background-color: #264466;
+    }
+`
+
+export const SearchCategoryLabel = styled.label`
+    
 `
 
 export const SearchTheme = styled.div`
