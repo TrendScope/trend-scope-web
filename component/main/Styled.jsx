@@ -303,7 +303,7 @@ export const PopularType = styled.div`
     width: 100%;
     text-align: center;
     border-radius: 16px;
-    padding: 2% 0;
+    padding: 3% 0;
     transition: background-color 0.4s ease;
 `
 
@@ -316,6 +316,6 @@ export const PopularContent = styled.div`
 export const PopularLine = styled.div`
     width: 100%;
     display: block;
-    border: 1px solid #C0C5DC;
+    border: 0.5px solid #C0C5DC;
     margin-bottom: 2%;
 `
