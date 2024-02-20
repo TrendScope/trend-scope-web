@@ -306,3 +306,16 @@ export const PopularType = styled.div`
     padding: 2% 0;
     transition: background-color 0.4s ease;
 `
+
+export const PopularContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+`
+
+export const PopularLine = styled.div`
+    width: 100%;
+    display: block;
+    border: 1px solid #C0C5DC;
+    margin-bottom: 2%;
+`

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import * as S from "./Styled.jsx"
+import CommunityCard from "../community/CommunityCard.jsx";
 
 export default function PopularKeyword() {
   const types = ['일간', '주간', '월간'];
@@ -21,6 +22,11 @@ export default function PopularKeyword() {
           </S.PopularType>
         ))}
       </S.PopularTypeContainer>
+      <S.PopularContent>
+        <CommunityCard />
+        <S.PopularLine />
+        <CommunityCard />
+      </S.PopularContent>
     </S.SearchContainer>
   )
 }
