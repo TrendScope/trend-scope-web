@@ -206,6 +206,7 @@ export const HistoryCardSlide = styled.div`
     ::-webkit-scrollbar-thumb {
         border-radius: 2px;
     }
+    margin: 10px 0;
 `
 
 export const HistoryCard = styled.div`
@@ -279,4 +280,29 @@ export const HistoryCardCategoryBox = styled.div`
     align-items: center;
     gap: 2%;
     white-space: nowrap;
+`
+
+export const PopularTypeContainer = styled.div`
+    border-radius: 16px;
+    border: 1px solid #DEEBF3;
+    background-color: #F3F9FD;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1px;
+    overflow: hidden;
+    margin: 10px 0;
+`
+
+export const PopularType = styled.div`
+    background-color: ${(props)=>props.isselected==='true'?'#264466':'transparent'};
+    color: ${(props)=>props.isselected==='true'?'#FFFFFF':''};
+    width: 100%;
+    text-align: center;
+    border-radius: 16px;
+    padding: 2% 0;
+    transition: background-color 0.4s ease;
 `

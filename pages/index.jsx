@@ -2,6 +2,7 @@ import { faChartLine, faCircleExclamation } from "@fortawesome/free-solid-svg-ic
 import * as S from "../component/_styled/mainStyled"
 import SearchIssue from "@/component/main/SerachIssue"
 import IssueHistory from "@/component/main/IssueHistory"
+import PopularKeyword from "@/component/main/PopularKeyword"
 
 export default function Main() {
   return (
@@ -20,6 +21,8 @@ export default function Main() {
       <SearchIssue />
 
       <IssueHistory />
+
+      <PopularKeyword />
     </S.MainContainer>
   )
 }
