@@ -4,13 +4,7 @@ import * as S from "./Styled.jsx"
 export default function IssueHistory() {
   return(
     <S.HistoryContainer>
-      <S.MainText>검색 내역</S.MainText>
-      <S.HistoryMore>
-        자세히보기
-        <S.HistoryMoreIcon icon={faChevronRight}/>
-        </S.HistoryMore>
       <S.HistoryCardSlide>
-
         <S.HistoryCard>
           <S.HistoryCardTop>
             <S.HistoryCardText>

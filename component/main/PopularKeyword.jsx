@@ -10,7 +10,6 @@ export default function PopularKeyword() {
   };
   return(
     <S.SearchContainer>
-      <S.MainText>커뮤니티 인기 키워드</S.MainText>
       <S.PopularTypeContainer>
         {types.map((type, idx)=>(
           <S.PopularType

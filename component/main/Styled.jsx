@@ -14,7 +14,11 @@ export const SearchContainer = styled.div`
 export const MainText = styled.span`
     font-size: 16px;
     font-weight: bold;
-    margin: 3% 0;
+    margin: 5%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `
 
 export const SearchCategory = styled.div`
@@ -206,7 +210,7 @@ export const HistoryCardSlide = styled.div`
     ::-webkit-scrollbar-thumb {
         border-radius: 2px;
     }
-    margin: 10px 0;
+    /* margin: 10px 0; */
 `
 
 export const HistoryCard = styled.div`

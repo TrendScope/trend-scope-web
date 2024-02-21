@@ -1,5 +1,6 @@
-import { faChartLine, faCircleExclamation } from "@fortawesome/free-solid-svg-icons"
+import { faChartLine, faCircleExclamation, faChevronRight } from "@fortawesome/free-solid-svg-icons"
 import * as S from "../component/_styled/mainStyled"
+import * as SC from "../component/main/Styled"
 import SearchIssue from "@/component/main/SerachIssue"
 import IssueHistory from "@/component/main/IssueHistory"
 import PopularKeyword from "@/component/main/PopularKeyword"
@@ -18,10 +19,19 @@ export default function Main() {
         </S.MainIssueBtn>
       </S.MainIssueBox>
 
+      <SC.MainText>원하는 분야의 이머징 이슈를 도출해 보세요</SC.MainText>
       <SearchIssue />
 
+      <SC.MainText>
+        <>검색 내역</>
+        <SC.HistoryMore>
+          자세히보기
+          <SC.HistoryMoreIcon icon={faChevronRight}/>
+        </SC.HistoryMore>
+      </SC.MainText>
       <IssueHistory />
 
+      <SC.MainText>커뮤니티 인기 키워드</SC.MainText>
       <PopularKeyword />
     </S.MainContainer>
   )

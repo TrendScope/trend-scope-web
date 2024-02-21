@@ -30,7 +30,6 @@ export default function SearchIssue() {
 
   return(
     <S.SearchContainer>
-      <S.MainText>원하는 분야의 이머징 이슈를 도출해 보세요</S.MainText>
       <S.SearchCategory>
         <S.SearchCategoryList>
           {checkedCategories.length>0?<>
