@@ -73,3 +73,54 @@ export const CardPercentRage = styled.div`
 export const CardPercentIcon = styled(FontAwesomeIcon)`
     width: 10px;
 `
+
+// Modal
+export const ModalWrapper = styled.div`
+    position: absolute;
+    width: 300px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #F3F9FD;
+    border-radius: 16px;
+    border: #BCCFDE solid 1px;
+    margin-top: -200px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 15px 15px 0;
+        border-color: #F3F9FD transparent;
+        display: block;
+        width: 0;
+        z-index: 1;
+        margin-left: -15px;
+        bottom: -15px;
+        left: 50%;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 15px 15px 0;
+        border-color: #BCCFDE transparent;
+        display: block;
+        width: 0;
+        z-index: 0;
+        margin-left: -15px;
+        bottom: -16px;
+        left: 50%;
+    }
+`
+
+export const ModalText = styled.div`
+    font-size: 10px;
+    color: #7F85A3;
+    font-weight: normal;
+    text-align: center;
+`

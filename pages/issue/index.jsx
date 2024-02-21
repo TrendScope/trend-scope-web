@@ -1,9 +1,15 @@
-import { faCircleCheck, faCircleQuestion, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCircleCheck, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import * as S from "../../component/_styled/issueStyled.jsx";
 import SearchIssue from "@/component/main/SerachIssue.jsx";
 import IndicatorCard from "@/component/issue/IndicatorCard.jsx";
+import { useState } from "react";
+import IndicatorModal from "@/component/issue/IndicatorModal.jsx";
 
 export default function Issue() {
+  const [IndicatorModalOpen, setIndicatorModalOpen] = useState(false);
+  const IndicatorModalOpenHandler = () => {
+    setIndicatorModalOpen(!IndicatorModalOpen);
+  };
   return(
     <S.IssueWrapper>
       <S.IssueIcon icon={faCircleCheck} />
@@ -32,9 +38,15 @@ export default function Issue() {
           </S.IssueSubjectText>
 
           <S.IssueIndicatorBox>
+            {IndicatorModalOpen &&
+              <IndicatorModal modalOpenHandler={IndicatorModalOpenHandler}/>
+            }
             <S.IssueMessage>
               <>이머징 이슈 평가 지표</>
-              <S.IssueInfoMore icon={faInfoCircle}/>
+              <S.IssueInfoMore
+                icon={faInfoCircle}
+                onClick={()=>{IndicatorModalOpenHandler()}}  
+              />
             </S.IssueMessage>
             <S.IssueIndicatorCard>
               <IndicatorCard />

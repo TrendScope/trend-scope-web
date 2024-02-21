@@ -76,6 +76,9 @@ export const IssueCategory = styled.div`
 export const IssueIndicatorBox = styled.div`
     width: 100%;
     margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
 export const IssueInfoMore = styled(FontAwesomeIcon)`
