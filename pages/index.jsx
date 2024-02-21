@@ -20,7 +20,9 @@ export default function Main() {
       </S.MainIssueBox>
 
       <SC.MainText>원하는 분야의 이머징 이슈를 도출해 보세요</SC.MainText>
-      <SearchIssue />
+      <SearchIssue
+        isClikable={true}
+      />
 
       <SC.MainText>
         <>검색 내역</>

@@ -2,10 +2,12 @@ import { faChevronDown, faChevronUp, faSearch } from "@fortawesome/free-solid-sv
 import * as S from "./Styled.jsx"
 import { useEffect, useState } from "react"
 
-export default function SearchIssue() {
+export default function SearchIssue({ isClikable }) {
   const [categoryOpen, setCategoryOpen] = useState(false);
   const categoryOpenHandler = () => {
-    setCategoryOpen(!categoryOpen);
+    if (isClikable) {
+      setCategoryOpen(!categoryOpen);
+    }
   };
 
   const categories = ['주택•건축', '경제', '교통', '환경', '복지', '안전', '문화', '행정', '과학•기술'];
