@@ -13,8 +13,7 @@ export const LayoutWrapper = styled.div`
 
 export const LayoutContent = styled.div`
     flex: 1 0 auto;
-    width: 90%;
-    margin: 5%;
+    width: 100%;
 `
 
 // navbar

@@ -5,6 +5,7 @@ export const MainContainer = styled.div`
     text-align: center;
     display: flex;
     flex-direction: column;
+    margin-top: 5%;
 `
 
 export const MainIssueBox = styled.div`
