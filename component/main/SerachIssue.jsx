@@ -40,8 +40,8 @@ export default function SearchIssue({ isClikable }) {
                 {category}
               </S.SearchCheckedCategory>
             ))}
-            <S.SearchCategoryMore>...</S.SearchCategoryMore>
-            <S.SearchCategoryCount>{checkedCategories.length}</S.SearchCategoryCount>
+            {/* <S.SearchCategoryMore>...</S.SearchCategoryMore>
+            <S.SearchCategoryCount>{checkedCategories.length}</S.SearchCategoryCount> */}
           </>:<>
             카테고리를 추가해 주세요          
           </>}

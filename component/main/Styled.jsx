@@ -57,7 +57,7 @@ export const SearchCheckedCategory = styled.div`
     padding: 0 12px;
     height: 24px;
     line-height: 24px;
-    margin-right: 2%;
+    margin: 1% 2%;
 `
 
 export const SearchCategoryMore = styled.div`
