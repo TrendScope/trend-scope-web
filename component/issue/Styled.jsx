@@ -198,3 +198,30 @@ export const IssueFactor = styled.div`
 export const IssueFactorPercent = styled.div`
     font-size: 14px;
 `
+
+export const IssueDropdownWrappepr = styled.div`
+    border-radius: 12px;
+    border: 1px solid #C0C5DC;
+    background-color: #FFFFFF;
+    text-align: center;
+    width: 60%;
+    position: absolute;
+    right: 10%;
+    margin-top: 3%;
+`
+
+export const IssueDropdownTop = styled.div`
+    font-size: 14px;
+    color: #7F85A3;
+    width: 100%;
+    padding: 4%;
+`
+
+export const IssueDropdownType = styled.div`
+    font-size: 14px;
+    color: ${(props)=>props.isselected==='true'?'#FFFFFF':'#2A2A3A'};
+    background-color: ${(props)=>props.isselected==='true'?'#264466':'transperate'};
+    border-radius: 10px;
+    padding: 4%;
+    transition: background-color 0.4s ease;
+`

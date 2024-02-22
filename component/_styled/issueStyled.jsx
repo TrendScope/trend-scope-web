@@ -112,6 +112,7 @@ export const CommunityBtn = styled.div`
 `
 
 // issue list
-export const IssueListWrapper = styled.div`
-    
+export const IssueSortIcon = styled(FontAwesomeIcon)`
+    width: 12px;
+    color: #2A2A3A;
 `
