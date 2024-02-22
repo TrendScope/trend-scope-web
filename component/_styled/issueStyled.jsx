@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
+// issue detail
 export const IssueWrapper = styled.div`
     width: 100%;
     background-color: #F3F9FD;
@@ -108,4 +109,9 @@ export const CommunityBtn = styled.div`
     color: #FFFFFF;
     font-size: 14px;
     padding: 3%;
+`
+
+// issue list
+export const IssueListWrapper = styled.div`
+    
 `

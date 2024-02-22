@@ -54,10 +54,12 @@ export const SearchCheckedCategory = styled.div`
     border-radius: 12px;
     background-color: #65839D;
     color: #ffffff;
-    padding: 0 12px;
-    height: 24px;
-    line-height: 24px;
+    padding: 2% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 1% 2%;
+    font-size: 12px;
 `
 
 export const SearchCategoryMore = styled.div`

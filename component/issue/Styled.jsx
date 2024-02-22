@@ -124,3 +124,77 @@ export const ModalText = styled.div`
     font-weight: normal;
     text-align: center;
 `
+
+// issue card
+export const IssueCardWrapper = styled.div`
+    background-color: #F3F9FD;
+    width: 90%;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5%;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    cursor: pointer;
+`
+
+export const IssueCardDate = styled.div`
+    font-size: 10px;
+    color: #7F85A3;
+    margin-bottom: 2%;
+`
+
+export const IssueCardSubject = styled.div`
+    border-radius: 12px;
+    border: none;
+    background-color: #264466;
+    color: #FFFFFF;
+    margin-bottom: 2%;
+    padding: 2% 5%;
+    font-size: 10px;
+`
+
+export const IssueCardKeyword = styled.div`
+    font-size: 14px;
+    color: #2A2A3A;
+`
+
+export const IssueCategoryBox = styled.div`
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 0;
+`
+
+export const IssueFactorBox = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+`
+
+export const IssueFactor = styled.div`
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    flex-direction: row;
+    color: #2A2A3A;
+    width: 25%;
+    padding: 1%;
+`
+
+export const IssueFactorPercent = styled.div`
+    font-size: 14px;
+`
