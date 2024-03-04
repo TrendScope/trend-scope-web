@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import styled from "styled-components";
 
 // issue detail
@@ -136,4 +137,9 @@ export const IssueSource = styled.div`
 
 export const IssueUpSection = styled.div`
     
+`
+
+export const IssuePopularResultImg = styled(Image)`
+    width: 80%;
+    margin: 5% 10%;
 `

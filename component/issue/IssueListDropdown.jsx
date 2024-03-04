@@ -13,7 +13,7 @@ export default function IssueListDropdown({ types, setCurrentType, currentType }
           key={idx}
           onClick={()=>{handlerTypeChange(type)}}
           isselected={type===currentType?'true':'false'}
-        >{type} 순</S.IssueDropdownType>
+        >{type}</S.IssueDropdownType>
       ))}
     </S.IssueDropdownWrappepr>
   )
