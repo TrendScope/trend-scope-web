@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import styled from "styled-components";
 
 export const userWrapper = styled.div`
@@ -95,5 +96,36 @@ export const userFooterRight = styled.div`
 
 // mypage
 export const MypageList = styled.div`
-    
+    width: 90%;
+    margin: 5%;
+`
+
+export const MypageNotPosts = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    color: #7F85A3;
+    font-size: 12px;
+    width: 100%;
+    min-height: 20vh;
+`
+
+export const MypageNotPostsIcon = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+`
+
+export const MypageIconImg = styled(Image)`
+    width: 24px;
+    height: 24px;
+    filter: invert(55%) sepia(12%) saturate(736%) hue-rotate(193deg) brightness(95%) contrast(83%);
+    /* color: #7F85A3; */
+`
+
+export const MypageIcon = styled(FontAwesomeIcon)`
+    width: 14px;
+    margin-left: 25px;
 `
