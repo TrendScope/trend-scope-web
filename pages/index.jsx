@@ -13,12 +13,14 @@ export default function Main() {
     <S.MainContainer>
       <S.MainIssueBox>
         <S.MainIssueBtn
-          onClick={()=>{router.push(`/emerging`)}}
+          onClick={()=>{router.push(`/info/emerging`)}}
         >
           <S.MainIssueIcon icon={faCircleExclamation}/>
           <S.MainIssueText>이머징 이슈란?</S.MainIssueText>
         </S.MainIssueBtn>
-        <S.MainIssueBtn>
+        <S.MainIssueBtn
+          onClick={()=>{router.push(`/info/popular`)}}
+        >
           <S.MainIssueIcon icon={faChartLine}/>
           <S.MainIssueText>실시간 이슈</S.MainIssueText>
         </S.MainIssueBtn>

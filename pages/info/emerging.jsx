@@ -1,8 +1,8 @@
-import * as SL from "../component/_styled/layoutStyled.jsx";
-import * as SI from "../component/_styled/issueStyled.jsx";
+import * as SL from "../../component/_styled/layoutStyled.jsx";
+import * as SI from "../../component/_styled/issueStyled.jsx";
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
-import logo_image from "../component/image/logo_navy.svg";
-import logo_text from "../component/image/logo_text_navy.svg";
+import logo_image from "../../component/image/logo_navy.svg";
+import logo_text from "../../component/image/logo_text_navy.svg";
 import { useRouter } from "next/router.js";
 
 export default function Main() {
