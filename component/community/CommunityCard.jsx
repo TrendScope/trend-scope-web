@@ -1,19 +1,30 @@
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import * as R from "@fortawesome/free-regular-svg-icons";
 import * as S from "./Styled.jsx";
+import { useRouter } from "next/router.js";
 
-export default function CommunityCard() {
+export default function CommunityCard({ community }) {
+  const router = useRouter();
+  const { id } = router.query;
+
   return(
-    <S.CardWrapper>
+    <S.CardWrapper
+      onClick={()=>{router.push(`/community/${id}`)}}
+    >
       <S.CardLeft>
-        <S.CardIssue>배송경로 최적화</S.CardIssue>
-        <S.CardTitle>이 이슈는 어때요??</S.CardTitle>
-        <S.CardContent>어떠세요? 어떤지말해줘어떤것같아?...</S.CardContent>
-        <S.CardAuthor>ID: 똥국</S.CardAuthor>
+        <S.CardIssue>{community.resultSubject}</S.CardIssue>
+        <S.CardTitle>{community.title}</S.CardTitle>
+        <S.CardContent>{community.content}...</S.CardContent>
+        <S.CardAuthor>ID: {community.author}</S.CardAuthor>
       </S.CardLeft>
       <S.CardRight>
-        <S.CardLike icon={faHeart}/>
-        <S.CardLikeCount>51</S.CardLikeCount>
-        <S.CardDate>2024.02.21</S.CardDate>
+        {community.my_liked?<>
+          <S.CardLike icon={faHeart}/>        
+        </>:<>
+          <S.CardLike icon={R.faHeart}/>
+        </>}
+        <S.CardLikeCount>{community.liked}</S.CardLikeCount>
+        <S.CardDate>{community.my_liked}</S.CardDate>
       </S.CardRight>
     </S.CardWrapper>
   )

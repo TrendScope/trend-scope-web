@@ -55,6 +55,10 @@ export const CommuIcon = styled(FontAwesomeIcon)`
     width: 12px;
 `
 
+export const CommuList = styled.div`
+    width: 100%;
+`
+
 export const CommuWriteBtn = styled.div`
     border-radius: 8px;
     background-color: #264466;
