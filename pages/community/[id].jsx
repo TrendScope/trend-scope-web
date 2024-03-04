@@ -96,8 +96,8 @@ export default function CommunityDetail() {
         <SI.IssueSubjectText>{community.resultSubject}</SI.IssueSubjectText>
         <SI.IssueMessage2>관련 키워드</SI.IssueMessage2>
         <SI.IssueSubjectText>
-        {community.categoryList && community.categoryList.map((category)=>(
-          <SI.IssueCategory>{category.category}</SI.IssueCategory>
+        {community.categoryList && community.categoryList.map((category, idx)=>(
+          <SI.IssueCategory key={idx}>{category.category}</SI.IssueCategory>
         ))}
         </SI.IssueSubjectText>
         <SI.IssueIndicatorBox>

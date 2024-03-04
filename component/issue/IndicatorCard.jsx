@@ -23,7 +23,7 @@ export default function IndicatorCard({ avgGrowthRate, influenceFactor, increase
         <S.CardPercentInner>{percent}%</S.CardPercentInner>
       </S.CardPercent>
       <S.CardPercentRage
-        avg={parseInt(increaseRate)}
+        avg={increaseRate}
       >
         <S.CardPercentIcon
           icon={(parseInt(increaseRate)>0)?faSortUp:faSortDown}
