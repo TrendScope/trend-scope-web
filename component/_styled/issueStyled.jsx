@@ -27,6 +27,7 @@ export const IssueMessage = styled.div`
     align-items: center;
     justify-content: center;
     gap: 2%;
+    line-height: 150%;
 `
 
 export const IssueMessage2 = styled.div`
@@ -115,4 +116,13 @@ export const CommunityBtn = styled.div`
 export const IssueSortIcon = styled(FontAwesomeIcon)`
     width: 12px;
     color: #2A2A3A;
+`
+
+// emerging issue
+export const IssueInfoText = styled.div`
+    text-align: center;
+    font-size: 12px;
+    color: #000000;
+    margin: 5% 0;
+    line-height: 175%;
 `
