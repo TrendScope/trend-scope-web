@@ -8,7 +8,7 @@ export default function IssueList() {
   const [currentType, setCurrentType] = useState('최신');
   const types = ['최신', '평균 증가율', '영향력 지수'];
 
-  const [dropdown, setDropdown] = useState(true);
+  const [dropdown, setDropdown] = useState(false);
   const handlerDropdown = () => {
     setDropdown(!dropdown);
   };
