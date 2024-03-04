@@ -92,3 +92,8 @@ export const userFooterRight = styled.div`
     color: #000000;
     cursor: pointer;
 `
+
+// mypage
+export const MypageList = styled.div`
+    
+`
