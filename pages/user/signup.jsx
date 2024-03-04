@@ -1,7 +1,10 @@
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import * as S from "../../component/_styled/userStyled.jsx";
+import { useRouter } from "next/router.js";
 
 export default function Signup() {
+  const router = useRouter();
+
   return(
     <S.userWrapper>
       <S.userSection>
@@ -35,7 +38,11 @@ export default function Signup() {
         <S.userBtn>회원가입 하기</S.userBtn>
         <S.userFooterAlram>
           <S.userFooterLeft>이미 회원이신가요?</S.userFooterLeft>
-          <S.userFooterRight>로그인 하러가기</S.userFooterRight>
+          <S.userFooterRight
+            onClick={()=>{
+              router.push(`/user/signin`)
+            }}
+          >로그인 하러가기</S.userFooterRight>
         </S.userFooterAlram>
       </S.userSection>
     </S.userWrapper>

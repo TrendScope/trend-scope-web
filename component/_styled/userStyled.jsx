@@ -40,7 +40,7 @@ export const userPlaceholder = styled.input`
     background-color: #F3F9FD;
     padding: 10px 5%;
     font-size: 12px;
-    width: 90%;
+    width: 100%;
     margin: 5% 0;
 `
 
