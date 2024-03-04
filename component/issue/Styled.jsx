@@ -206,8 +206,11 @@ export const IssueDropdownWrappepr = styled.div`
     text-align: center;
     width: 60%;
     position: absolute;
-    right: 10%;
-    margin-top: 3%;
+    /* right: 10%; */
+    right: ${(props)=>props.location==='true'?'10%':'35%'};
+    /* margin-top: 3%; */
+    margin-top: ${(props)=>props.location==='true'?'3%':'35%'};
+    font-weight: normal;
 `
 
 export const IssueDropdownTop = styled.div`
