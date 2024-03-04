@@ -247,4 +247,26 @@ export const CommunityPostContent = styled.div`
     width: 100%;
     white-space: pre-wrap;
     line-height: 150%;
+    margin-bottom: 5%;
+`
+
+// comment
+export const CommunityCommentWrapper = styled.div`
+    width: 100%;
+    font-weight: normal;
+`
+
+export const CommunityCommentBox = styled.div`
+    margin: 5% 0;
+    font-size: 10px;
+    color: #7F85A3;
+`
+
+export const CommunityCommentContent = styled.div`
+    font-size: 12px;
+    color: #2A2A3A;
+    line-height: 120%;
+    margin: 5% 0;
+    padding-bottom: 5%;
+    border-bottom: 1px solid #C0C5DC;
 `

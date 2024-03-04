@@ -6,6 +6,7 @@ import * as R from "@fortawesome/free-regular-svg-icons";
 import IndicatorModal from "@/component/issue/IndicatorModal.jsx";
 import IndicatorCard from "@/component/issue/IndicatorCard.jsx";
 import { useEffect, useState } from "react";
+import CreateComment from "@/component/community/CreateComment.jsx";
 
 export default function CommunityDetail() {
   const [community, setCommunity] = useState([]);
@@ -59,8 +60,44 @@ export default function CommunityDetail() {
     }
   };
 
+  const [comments, setComments] = useState([]);
+  const fetchComments = async () => {
+    try {
+      // const response = await API.get(``);
+      // const data = response.data;
+
+      // dummy
+      const dummy = {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "성공입니다.",
+        "result": {
+            "commentList": [
+                {
+                    "commentId": 1,
+                    "content": "댓글은 이런식으로..",
+                    "author": "Dongguk2024",
+                    "created_at": "2024.01.20",              
+                },
+                {
+                  "commentId": 2,
+                  "content": "댓글은 삼런식으로..",
+                  "author": "Dongguk2024",
+                  "created_at": "2024.01.20",              
+                }
+            ]
+        }
+      }
+
+      setComments(dummy.result.commentList);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   useEffect(()=>{
     fetchCommunity();
+    fetchComments();
   }, [])
   
   useEffect(() => {
@@ -128,6 +165,18 @@ export default function CommunityDetail() {
         <S.CommunityPostContent>
           {(community.content || "").replace(/\r\n/g, "\n")}
         </S.CommunityPostContent>
+        <CreateComment />
+        <S.CommunityCommentWrapper>
+          {comments.map((comment, idx)=>(
+            <S.CommunityCommentBox key={idx}>
+              <S.DetailCreated>
+                <S.DetailCreatedText>{comment.created_at}</S.DetailCreatedText>
+                <S.DetailCreatedText>ID : {comment.author}</S.DetailCreatedText>
+              </S.DetailCreated>
+              <S.CommunityCommentContent>{comment.content}</S.CommunityCommentContent>
+            </S.CommunityCommentBox>
+          ))}
+        </S.CommunityCommentWrapper>
       </S.CommunityPostWrapper>
     </S.DetailWrapper>
   )
