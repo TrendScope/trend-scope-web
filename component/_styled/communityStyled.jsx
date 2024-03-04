@@ -105,3 +105,74 @@ export const CreateBtn = styled.div`
 export const CreatePost = styled.div`
     width: 100%;
 `
+
+// write
+export const WriteLabel = styled.div`
+    font-weight: bold;
+    font-size: 14px;
+    color: #7F85A3;
+`
+
+export const WriteTitle = styled.input`
+    &::placeholder {
+        color: #C0C5DC; 
+        border: none;
+    }
+    color: #484A64;
+    border: 1px solid #CEDEED;
+    border-radius: 32px;
+    outline: none;
+    background-color: #F3F9FD;
+    padding: 10px 10%;
+    font-size: 12px;
+    width: 90%;
+    margin: 5%;
+`
+
+export const WriteTextarea = styled.textarea`
+     &::placeholder {
+        color: #C0C5DC; 
+        border: none;
+    }
+    color: #484A64;
+    border: 1px solid #CEDEED;
+    border-radius: 8px;
+    outline: none;
+    background-color: #F3F9FD;
+    padding: 10px 10%;
+    font-size: 12px;
+    width: 90%;
+    margin: 5%;
+    min-height: 40vh;
+`
+
+export const WriteBtnBox = styled.div`
+    width: 90%;
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+`
+
+export const WriteBackBtn = styled.div`
+    border-radius: 8px;
+    border: none;
+    background-color: #264466;
+    color: #FFFFFF;
+    width: 45%;
+    padding: 5%;
+`
+
+export const WriteSubmitBtn = styled.div`
+    border-radius: 8px;
+    border: none;
+    background-color: ${(props)=>props.$active?`#264466`:`#CEDEED`};
+    transition: background-color 0.4s ease;
+    color: #FFFFFF;
+    width: 45%;
+    padding: 5%;
+`
