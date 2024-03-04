@@ -3,8 +3,17 @@ import * as SM from "../main/Styled.jsx";
 import factor1 from "../image/factor1.svg"
 import factor2 from "../image/factor2.svg"
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router.js";
 
 export default function IssueCard({ issue, selected }) {
+  const router = useRouter();
+  const { id } = router.query;
+  const handlerRouteDetail = () => {
+    if (!selected) {
+      router.push(`/issue/${id}`)
+    }
+  };
+
   const [categories, setCategories] = useState([]);
 
   useEffect(()=>{
@@ -14,6 +23,7 @@ export default function IssueCard({ issue, selected }) {
   return(
     <S.IssueCardWrapper
       selected={selected}
+      onClick={handlerRouteDetail}
     >
       <S.IssueCardDate selected={selected}>2024.02.20</S.IssueCardDate>
       <S.IssueCardSubject selected={selected}>{issue.resultSubject}</S.IssueCardSubject>

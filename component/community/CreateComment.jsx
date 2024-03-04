@@ -17,7 +17,7 @@ export default function CreateComment() {
         type="text"
       />
       <S.SearchThemeBtn
-        isactive={(comment.length>0) ? 'true' : 'false'}
+        $isactive={(comment.length>0)?`true`:`false`}
       >
         <S.SearchThemeBtnFont icon={faCommentAlt}/>
       </S.SearchThemeBtn>

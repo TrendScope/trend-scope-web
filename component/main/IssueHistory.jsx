@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react"
 import * as S from "./Styled.jsx"
 import API from "../../pages/api.js"
+import { useRouter } from "next/router.js";
 
 export default function IssueHistory() {
+  const router = useRouter();
+  const { id } = router.query;
+
   const [historys, setHistorys] = useState([]);
   const fetchHistorys = async () => {
     try {
@@ -78,14 +82,17 @@ export default function IssueHistory() {
     <S.HistoryContainer>
       <S.HistoryCardSlide>
         {historys.map((history, idx)=>(
-          <S.HistoryCard key={idx}>
+          <S.HistoryCard
+            key={idx}
+            onClick={()=>{router.push(`/issue/${id}`)}}
+          >
             <S.HistoryCardTop>
               <S.HistoryCardText>
                   <S.HistoryCardDate>2024.02.20</S.HistoryCardDate>
                   <S.HistoryCardTheme>주제어: {history.resultSubject}</S.HistoryCardTheme>
               </S.HistoryCardText>
               <S.HistoryCardPercent
-                  percent={75}
+                  $percent={75}
               >
                 <S.HistoryCardPercentInner>75%</S.HistoryCardPercentInner>
               </S.HistoryCardPercent>

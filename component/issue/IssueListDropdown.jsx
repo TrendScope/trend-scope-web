@@ -14,7 +14,7 @@ export default function IssueListDropdown({ types, setCurrentType, currentType, 
           type={type}
           key={idx}
           onClick={()=>{handlerTypeChange(type)}}
-          isselected={type===currentType?'true':'false'}
+          $isselected={type===currentType?'true':'false'}
         >{type}</S.IssueDropdownType>
       ))}
     </S.IssueDropdownWrappepr>

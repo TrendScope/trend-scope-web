@@ -1,7 +1,7 @@
 import { faBookBookmark, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import * as S from "../../component/_styled/issueStyled.jsx";
 import IssueCard from "@/component/issue/IssueCard.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import IssueListDropdown from "@/component/issue/IssueListDropdown.jsx";
 
 export default function IssueList() {
@@ -12,6 +12,73 @@ export default function IssueList() {
   const handlerDropdown = () => {
     setDropdown(!dropdown);
   };
+
+  const [historys, setHistorys] = useState([]);
+  const fetchHistorys = async () => {
+    try {
+      // const response = await API.get(``);
+      // const data = response.data;
+
+      // dummy
+      const dummy = {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "성공입니다.",
+        "result": {
+            "historyList": [
+                {
+                    "historyId": 1,
+                    "resultSubject": "드론",
+                    "categoryList": [
+                        {
+                            "category": "과학 • 기술",
+                        },
+                        {
+                            "category": "안전",
+                        },
+                        {
+                            "category": "환경",
+                        },
+                        {
+                            "category": "주택 • 건축",
+                        }
+                    ],
+                  "avgGrowthRate": 45,
+                  "influenceFactor": 63 
+                },
+                {
+                    "historyId": 2,
+                    "resultSubject": "드론2",
+                    "categoryList": [
+                        {
+                            "category": "과학 • 기술",
+                        },
+                        {
+                            "category": "안전",
+                        },
+                        {
+                            "category": "환경",
+                        },
+                        {
+                            "category": "주택 • 건축",
+                        }
+                    ],
+                  "avgGrowthRate": 45,
+                  "influenceFactor": 63 
+                }
+            ]
+        }
+      }
+
+      setHistorys(dummy.result.historyList);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  useEffect(()=>{
+    fetchHistorys();
+  }, [])
 
   return(
     <S.IssueWrapper>
@@ -32,8 +99,12 @@ export default function IssueList() {
           currentType={currentType}
         />
         )}
-        <IssueCard />
-        <IssueCard />
+        {historys.map((history, idx)=>(
+          <IssueCard
+            key={idx}
+            issue={history}
+          />
+        ))}
       </S.IssueContainer>
     </S.IssueWrapper>
   )

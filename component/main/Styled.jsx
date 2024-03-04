@@ -157,9 +157,9 @@ export const SearchThemePlaceholder = styled.input`
 `
 
 export const SearchThemeBtn = styled.button`
-    background-color: ${(props)=>(props.isactive==='true'?'#264466':'#DEEBF3')};
-    color: ${(props)=>(props.isactive==='true'?'#ffffff':'#95AEC2')};
-    cursor: ${(props)=>(props.isactive==='true'?'pointer':'')};
+    background-color: ${(props)=>(props.$isactive===`true`?`#264466`:`#DEEBF3`)};
+    color: ${(props)=>(props.$isactive===`true`?`#ffffff`:`#95AEC2`)};
+    cursor: ${(props)=>(props.$isactive===`true`&&`pointer`)};
     border: none;
     border-radius: 8px;
     height: 40px;
@@ -254,7 +254,7 @@ export const HistoryCardTheme = styled.div`
 `
 
 export const HistoryCardPercent = styled.div`
-    background: ${(props)=>props.percent && `conic-gradient(#264466 ${props.percent}%, #F3F9FD 0%)`};
+    background: ${(props)=>props.$percent && `conic-gradient(#264466 ${props.percent}%, #F3F9FD 0%)`};
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -304,13 +304,17 @@ export const PopularTypeContainer = styled.div`
 `
 
 export const PopularType = styled.div`
-    background-color: ${(props)=>props.isselected==='true'?'#264466':'transparent'};
-    color: ${(props)=>props.isselected==='true'?'#FFFFFF':''};
+    background-color: ${(props)=>props.$isselected==='true'?'#264466':'transparent'};
+    color: ${(props)=>props.$isselected==='true'?'#FFFFFF':''};
     width: 100%;
     text-align: center;
     border-radius: 16px;
     padding: 3% 0;
     transition: background-color 0.4s ease;
+`
+
+export const PopularContentBox = styled.div`
+    
 `
 
 export const PopularContent = styled.div`

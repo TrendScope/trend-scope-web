@@ -43,6 +43,7 @@ export const LogoImage = styled(Image)`
 
 export const LogoText = styled(Image)`
     width: 50%;
+    height: auto;
     cursor: pointer;
 `
 

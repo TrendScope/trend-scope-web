@@ -36,7 +36,7 @@ export default function SearchIssue({ isClikable }) {
         <S.SearchCategoryList>
           {checkedCategories.length>0?<>
             {checkedCategories.map((category)=>(
-              <S.SearchCheckedCategory>
+              <S.SearchCheckedCategory key={category}>
                 {category}
               </S.SearchCheckedCategory>
             ))}
@@ -51,9 +51,7 @@ export default function SearchIssue({ isClikable }) {
           onClick={categoryOpenHandler}/>
       </S.SearchCategory>
       {categoryOpen && 
-        <S.SearchCategoryModal
-          isactive={categoryOpen?'true':'false'}
-        >
+        <S.SearchCategoryModal>
           {categories.map((category, idx)=>(
             <S.SearchCategoryBox
               key={idx}
@@ -77,7 +75,7 @@ export default function SearchIssue({ isClikable }) {
           type="text"
         />
         <S.SearchThemeBtn
-          isactive={(theme.length>0)&&(checkedCategories.length>0) ? 'true' : 'false'}
+          $isactive={(theme.length>0)&&(checkedCategories.length>0)?`true`:`false`}
         >
           <S.SearchThemeBtnFont icon={faSearch}/>
         </S.SearchThemeBtn>

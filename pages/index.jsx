@@ -33,7 +33,9 @@ export default function Main() {
 
       <SC.MainText>
         <>검색 내역</>
-        <SC.HistoryMore>
+        <SC.HistoryMore
+          onClick={()=>{router.push(`/issue`)}}
+        >
           자세히보기
           <SC.HistoryMoreIcon icon={faChevronRight}/>
         </SC.HistoryMore>

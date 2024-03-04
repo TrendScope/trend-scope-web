@@ -18,7 +18,7 @@ export default function IndicatorCard({ avgGrowthRate, influenceFactor, increase
         </S.CardText>
       </S.CardTitle>
       <S.CardPercent
-        percent={percent}
+        $percent={percent}
       >
         <S.CardPercentInner>{percent}%</S.CardPercentInner>
       </S.CardPercent>

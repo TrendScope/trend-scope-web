@@ -38,7 +38,7 @@ export const CardText = styled.div`
 export const CardPercent = styled.div`
     border-radius: 100%;
     border: none;
-    background: ${(props)=>props.percent && `conic-gradient(#264466 ${props.percent}%, #FFFFFF 0%)`};
+    background: ${(props)=>props.$percent && `conic-gradient(#264466 ${props.percent}%, #FFFFFF 0%)`};
     width: 60px;
     height: 60px;
     display: flex;
@@ -224,8 +224,8 @@ export const IssueDropdownTop = styled.div`
 
 export const IssueDropdownType = styled.div`
     font-size: 14px;
-    color: ${(props)=>props.isselected==='true'?'#FFFFFF':'#2A2A3A'};
-    background-color: ${(props)=>props.isselected==='true'?'#264466':'transperate'};
+    color: ${(props)=>props.$isselected==='true'?'#FFFFFF':'#2A2A3A'};
+    background-color: ${(props)=>props.$isselected==='true'?'#264466':'transperate'};
     border-radius: 10px;
     padding: 4%;
     transition: background-color 0.4s ease;

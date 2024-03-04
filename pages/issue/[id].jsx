@@ -4,8 +4,11 @@ import SearchIssue from "@/component/main/SerachIssue.jsx";
 import IndicatorCard from "@/component/issue/IndicatorCard.jsx";
 import { useState } from "react";
 import IndicatorModal from "@/component/issue/IndicatorModal.jsx";
+import { useRouter } from "next/router.js";
 
 export default function Issue() {
+  const router = useRouter();
+
   const [IndicatorModalOpen, setIndicatorModalOpen] = useState(false);
   const IndicatorModalOpenHandler = () => {
     setIndicatorModalOpen(!IndicatorModalOpen);
@@ -55,7 +58,9 @@ export default function Issue() {
           </S.IssueIndicatorBox>
         </S.IssueSubjectBox>
 
-        <S.CommunityBtn>이슈에 목소리를 더하세요</S.CommunityBtn>
+        <S.CommunityBtn
+          onClick={()=>{router.push(`/community/create/write`)}}
+        >이슈에 목소리를 더하세요</S.CommunityBtn>
         
       </S.IssueContainer>
     </S.IssueWrapper>
