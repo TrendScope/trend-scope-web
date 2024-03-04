@@ -127,7 +127,8 @@ export const ModalText = styled.div`
 
 // issue card
 export const IssueCardWrapper = styled.div`
-    background-color: #F3F9FD;
+    background-color: ${(props)=>props.selected===true?`#264466`:`#F3F9FD`};
+    transition: background-color 0.4s ease;
     width: 90%;
     margin: 5%;
     display: flex;
@@ -142,15 +143,15 @@ export const IssueCardWrapper = styled.div`
 
 export const IssueCardDate = styled.div`
     font-size: 10px;
-    color: #7F85A3;
+    color: ${(props)=>props.selected?`#EBEDF8`:`#7F85A3`};
     margin-bottom: 2%;
 `
 
 export const IssueCardSubject = styled.div`
     border-radius: 12px;
     border: none;
-    background-color: #264466;
-    color: #FFFFFF;
+    background-color: ${(props)=>props.selected?`#FFFFFF`:`#264466`};
+    color: ${(props)=>props.selected?`#2A2A3A`:`#FFFFFF`};
     margin-bottom: 2%;
     padding: 2% 5%;
     font-size: 10px;
@@ -158,7 +159,8 @@ export const IssueCardSubject = styled.div`
 
 export const IssueCardKeyword = styled.div`
     font-size: 14px;
-    color: #2A2A3A;
+    color: ${(props)=>props.selected?`#FFFFFF`:`#2A2A3A`};
+
 `
 
 export const IssueCategoryBox = styled.div`
@@ -191,7 +193,7 @@ export const IssueFactor = styled.div`
     gap: 5%;
     flex-direction: row;
     color: #2A2A3A;
-    width: 25%;
+    width: 30%;
     padding: 1%;
 `
 

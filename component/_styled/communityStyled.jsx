@@ -85,3 +85,23 @@ export const CreateText = styled.div`
     color: #2A2A3A;
     margin: 5% 0;
 `
+
+export const CreateBtn = styled.div`
+    cursor: pointer;
+    background-color: ${(props)=>!props.selected?`#CEDEED`:`#264466`};
+    transition: background-color 0.4s ease;
+    border: none;
+    border-radius: 8px;
+    width: 90%;
+    margin: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 3%;
+`
+
+export const CreatePost = styled.div`
+    width: 100%;
+`
