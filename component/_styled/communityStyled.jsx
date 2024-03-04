@@ -180,3 +180,71 @@ export const WriteSubmitBtn = styled.div`
     width: 45%;
     padding: 5%;
 `
+
+// detail
+export const DetailWrapper = styled.div`
+    width: 90%;
+    margin: 5%;
+`
+
+export const DetailTop = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5% 0;
+    border-bottom: 1px solid #C0C5DC;
+`
+
+export const DetailInfo = styled.div`
+    width: 90%;
+    font-size: 10px;
+    color: #7F85A3;
+`
+
+export const DetailCreated = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    align-items: center;
+    width: 100%;
+`
+
+export const DetailCreatedText = styled.div`
+    
+`
+
+export const DetailTitle = styled.div`
+    font-weight: bold;
+    font-size: 16px;
+    color: #000000;
+    margin: 5% 0;
+`
+
+export const DetailSubjectWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+`
+
+export const CommunityPostWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 5%;
+    font-weight: bold;
+`
+
+export const CommunityPostContent = styled.div`
+    font-weight: normal;
+    border: 1px solid #CEDEED;
+    border-radius: 8px;
+    padding: 5%;
+    font-size: 12px;
+    width: 100%;
+    white-space: pre-wrap;
+    line-height: 150%;
+`

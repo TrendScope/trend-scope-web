@@ -1,31 +1,34 @@
 import * as S from "./Styled.jsx"
 import factor1 from "../image/factor1.svg"
+import factor2 from "../image/factor2.svg"
 import { faSortDown, faSortUp } from "@fortawesome/free-solid-svg-icons"
 
-export default function IndicatorCard() {
-  const dummy = {
-    'name': '평균 증가율',
-    'percent': '45',
-    'avg': '15'
-  }
+export default function IndicatorCard({ avgGrowthRate, influenceFactor, increaseRate }) {
+  const percent = avgGrowthRate? avgGrowthRate : influenceFactor
   return(
     <S.CardContainer>
       <S.CardTitle>
-        <S.CardIcon src={factor1} alt="factor1"/>
-        <S.CardText>{dummy.name}</S.CardText>
+        {avgGrowthRate?<>
+          <S.CardIcon src={factor1} alt="factor1"/>
+        </>:<>
+          <S.CardIcon src={factor2} alt="factor2"/>
+        </>}
+        <S.CardText>
+          {avgGrowthRate?'평균 증가율':'영향력 지수'}
+        </S.CardText>
       </S.CardTitle>
       <S.CardPercent
-        percent={dummy.percent}
+        percent={percent}
       >
-        <S.CardPercentInner>{dummy.percent}%</S.CardPercentInner>
+        <S.CardPercentInner>{percent}%</S.CardPercentInner>
       </S.CardPercent>
       <S.CardPercentRage
-        avg={parseInt(dummy.avg)}
+        avg={parseInt(increaseRate)}
       >
         <S.CardPercentIcon
-          icon={(parseInt(dummy.avg)>0)?faSortUp:faSortDown}
+          icon={(parseInt(increaseRate)>0)?faSortUp:faSortDown}
         />
-        <>10%</>
+        <>{increaseRate}%</>
       </S.CardPercentRage>
     </S.CardContainer>
   )
