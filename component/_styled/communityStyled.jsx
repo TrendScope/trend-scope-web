@@ -69,3 +69,19 @@ export const CardLine = styled.div`
     border: 0.5px solid #C0C5DC;
     margin-bottom: 5%;
 `
+
+// create
+export const CreateWrapper = styled.div`
+    width: 90%;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+export const CreateText = styled.div`
+    font-size: 16px;
+    font-weight: bold;
+    color: #2A2A3A;
+    margin: 5% 0;
+`
