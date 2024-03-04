@@ -126,3 +126,14 @@ export const IssueInfoText = styled.div`
     margin: 5% 0;
     line-height: 175%;
 `
+
+export const IssueSource = styled.div`
+    color: #7F85A3;
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 5%;
+`
+
+export const IssueUpSection = styled.div`
+    
+`

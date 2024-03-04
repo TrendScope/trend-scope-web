@@ -4,12 +4,17 @@ import * as SC from "../component/main/Styled"
 import SearchIssue from "@/component/main/SerachIssue"
 import IssueHistory from "@/component/main/IssueHistory"
 import PopularKeyword from "@/component/main/PopularKeyword"
+import { useRouter } from "next/router"
 
 export default function Main() {
+  const router = useRouter();
+
   return (
     <S.MainContainer>
       <S.MainIssueBox>
-        <S.MainIssueBtn>
+        <S.MainIssueBtn
+          onClick={()=>{router.push(`/emerging`)}}
+        >
           <S.MainIssueIcon icon={faCircleExclamation}/>
           <S.MainIssueText>이머징 이슈란?</S.MainIssueText>
         </S.MainIssueBtn>
